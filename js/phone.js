@@ -69,6 +69,7 @@ const handleShowAll = () => {
 
 // handleShowDetails btn
 const handleShowDetails = async (id) => {
+    loadingSpinner(true)
     const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
     const data = await res.json();
     displayModalShow(data.data)
@@ -76,7 +77,6 @@ const handleShowDetails = async (id) => {
 
 // show Modal data display 
 const displayModalShow = (phone) => {
-    loadingSpinner()
     my_modal_5.showModal();
     console.log(phone);
     const modalContainer = document.getElementById('modal-container');
@@ -93,6 +93,6 @@ const displayModalShow = (phone) => {
             <p><span class = "font-bold">Release data:</span> <span class="text-[#706F6F]">${phone.releaseDate}</span> </p>
             <p><span class = "font-bold">GPS:</span> <span class="text-[#706F6F]">${phone.mainFeatures.sensors}</span> </p>
 
-    `
+    `;
+    loadingSpinner(false)
 }
-loadPhone('13')

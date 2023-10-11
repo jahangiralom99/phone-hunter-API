@@ -1,70 +1,181 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone Hunter api</title>
+    <!-- fontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/b12af23a92.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- DaisyUi + Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-
-</head>
-<body>
-    <header class="mt-2">
-        <!-- <h1 class="text-5xl text-center font-bold">This is My phone Hunter</h1> -->
-     </header>
-     <main class="max-w-screen-xl mx-auto p-8">
-        <section class="text-center">
-            <div>
-                <input id="search-field" type="text" placeholder="Search..." class="input input-bordered input-primary w-full max-w-xs" />
-                <button onclick="handleSearch()" class="btn text-white bg-[#267bfa] hover:bg-[#1c57ae] mt-4 md:mt-0">Search</button>
-            </div>
-        </section>
-        <section class="mt-8">
-            <!-- loader spinner -->
-            <div id="loader-spinner" class="text-center mt-40 hidden">
-                <span class="loading loading-spinner text-info loading-lg"></span>
-            </div>
-            <!-- phone container  -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6" id="phone-container">
-
-            </div>
-            <!-- show All button -->
-            <div onclick="handleShowAll()" id="btn-show-all" class="text-center mt-4 hidden">
-                <button class="btn text-white bg-[#267bfa] hover:bg-[#1c57ae]">Show ALL</button>
-            </div>
-        </section>
-        <!-- modal start -->
-            <!-- Open the modal using ID.showModal() method -->
-            <dialog id="my_modal_5" class="modal">
-            <div class="modal-box modal-box w-11/12 max-w-3xl">
-                 <!-- loader spinner -->
-            <div id="loader-spinner" class="text-center mt-20 hidden">
-                <span class="loading loading-spinner text-info loading-lg"></span>
-            
-            </div>
-            <div id="modal-container" class="space-y-5 "> </div>
-            <div class="modal-action">
-                <form method="dialog">
-                    <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn text-white bg-[#DC3545] hover:bg-[#ef152b]">Close</button>
-                </form>
-                </div>
-            </div>
-            </dialog>
-        <!-- modal end-->
-
-     </main>
-     <footer>
-
-     </footer>
+  </head>
+  <body>
+    <header class="max-w-screen-xl mx-auto px-8">
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <a class="font-bold text-3xl">Hot Gadgets</a>
+          </div>
+          <div class="flex-none">
+            <button
+              class="btn text-white bg-[#267bfa] hover:bg-[#1c57ae] mt-4 md:mt-0"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <div class="text-center space-y-5">
+          <h1 class="text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
+          <p>
+            There are many variations of passages of Lorem Ipsum available,<br />
+            but the majority have suffered alteration in some form,<br />
+            by injected humou.
+          </p>
+          <button
+            class="btn text-white bg-[#267bfa] hover:bg-[#1c57ae] mt-4 md:mt-0"
+          >
+            Search
+          </button>
+        </div>
+        <div class="mt-8">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center items-end"
+          >
+            <img src="images/pngwing 2.png" alt="" />
+            <img src="images/pngwing 1.png" alt="" />
+            <img src="images/pngwing 3.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="max-w-screen-xl mx-auto p-8">
+      <h1 class="text-center mb-8 font-bold text-5xl">Search your phone</h1>
+      <section class="text-center">
+        <div>
+          <input
+            id="search-field"
+            type="text"
+            placeholder="Search..."
+            class="input input-bordered input-primary w-full max-w-xs"
+          />
+          <button
+            onclick="handleSearch()"
+            class="btn text-white bg-[#267bfa] hover:bg-[#1c57ae] mt-4 md:mt-0"
+          >
+            Search
+          </button>
+        </div>
+      </section>
+      <section class="mt-8">
+        <!-- loader spinner -->
+        <div id="loader-spinner" class="text-center mt-40 hidden">
+          <span class="loading loading-spinner text-info loading-lg"></span>
+        </div>
+        <!-- phone container  -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="phone-container"
+        ></div>
+        <!-- show All button -->
+        <div
+          onclick="handleShowAll()"
+          id="btn-show-all"
+          class="text-center mt-4 hidden"
+        >
+          <button class="btn text-white bg-[#267bfa] hover:bg-[#1c57ae]">
+            Show ALL
+          </button>
+        </div>
+      </section>
+      <!-- modal start -->
+      <!-- Open the modal using ID.showModal() method -->
+      <dialog id="my_modal_5" class="modal">
+        <div class="modal-box modal-box w-11/12 max-w-3xl">
+          <!-- loader spinner -->
+          <div id="loader-spinner" class="text-center mt-44 hidden">
+            <span class="loading loading-spinner text-info loading-lg"></span>
+          </div>
+          <div id="modal-container" class="space-y-5"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn text-white bg-[#DC3545] hover:bg-[#ef152b]">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <!-- modal end-->
+    </main>
+    <footer class="max-w-screen-xl mx-auto p-8">
+      <div class="md:flex text-center md:justify-between items-center">
+        <div class="space-y-2">
+          <h1 class="text-3xl font-bold">Hot Gadgets</h1>
+          <p>You can definitely work.</p>
+        </div>
+        <div class="flex items-center justify-center gap-3 mt-6 md:mt-0">
+          <div class="space-x-6">
+            <i class="fa-brands fa-facebook text-3xl text-[#1877F2]"></i>
+            <i class="fa-brands fa-twitter text-3xl text-[ #1DA1F2]"></i>
+            <i class="fa-brands fa-instagram text-red-500 text-3xl"></i>
+          </div>
+          <button
+            class="btn text-white bg-[#267bfa] hover:bg-[#1c57ae] mt-4 md:mt-0"
+          >
+            Join Premium
+          </button>
+        </div>
+      </div>
+      <hr class="border-2 mt-3" />
+      <section class="grid md:grid-cols-4 mt-6 grid-cols-2 gap-8">
+        <div>
+            <p class="font-bold text-[#403F3F]">Product</p>
+            <p class="font-bold text-[#403F3F]">Browse jobs</p>
+            <p class="font-bold text-[#403F3F]">Remote jobs</p>
+            <p class="font-bold text-[#403F3F]">Startup jobs</p>
+            <p class="font-bold text-[#403F3F]">Company jobs</p>
+        </div>
+        <div>
+            <p class="font-bold text-[#403F3F]">Popular</p>
+            <p class="font-bold text-[#403F3F]">UIUX Design</p>
+            <p class="font-bold text-[#403F3F]">Product Design</p>
+            <p class="font-bold text-[#403F3F]">Back-End Developer</p>
+            <p class="font-bold text-[#403F3F]">Front-End Developer</p>
+        </div>
+        <div>
+            <p class="font-bold text-[#403F3F]">Resource</p>
+            <p class="font-bold text-[#403F3F]">Faq</p>
+            <p class="font-bold text-[#403F3F]">Support</p>
+            <p class="font-bold text-[#403F3F]">Privacy Policy</p>
+            <p class="font-bold text-[#403F3F]">Terms of Service</p>
+        </div>
+        <div>
+            <p class="font-bold text-[#403F3F]">Company</p>
+            <p class="font-bold text-[#403F3F]">About Us</p>
+            <p class="font-bold text-[#403F3F]">Contact Us</p>
+            <p class="font-bold text-[#403F3F]">Career Tips</p>
+            <p class="font-bold text-[#403F3F]">Careers</p>
+        </div>
+      </section>
+    </footer>
     <!-- js -->
     <script src="js/phone.js"></script>
-</body>
+  </body>
 </html>
 
 <div>
-    <img src="" alt="">
-    <h4></h4>
-    <p></p>
+  <img src="" alt="" />
+  <h4></h4>
+  <p></p>
 </div>
