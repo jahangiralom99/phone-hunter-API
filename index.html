@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter api</title>
+    <!-- DaisyUi + Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header class="mt-2">
+        <!-- <h1 class="text-5xl text-center font-bold">This is My phone Hunter</h1> -->
+     </header>
+     <main class="max-w-screen-xl mx-auto p-8">
+        <section class="text-center">
+            <div>
+                <input id="search-field" type="text" placeholder="Search..." class="input input-bordered input-primary w-full max-w-xs" />
+                <button onclick="handleSearch()" class="btn text-white bg-[#267bfa] hover:bg-[#1c57ae] mt-4 md:mt-0">Search</button>
+            </div>
+        </section>
+        <section class="mt-8">
+            <!-- loader spinner -->
+            <div id="loader-spinner" class="text-center mt-40 hidden">
+                <span class="loading loading-spinner text-info loading-lg"></span>
+            </div>
+            <!-- phone container  -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6" id="phone-container">
+
+            </div>
+            <!-- show All button -->
+            <div onclick="handleShowAll()" id="btn-show-all" class="text-center mt-4 hidden">
+                <button class="btn text-white bg-[#267bfa] hover:bg-[#1c57ae]">Show ALL</button>
+            </div>
+        </section>
+        <!-- modal start -->
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal_5" class="modal">
+            <div class="modal-box modal-box w-11/12 max-w-3xl">
+                 <!-- loader spinner -->
+            <div id="loader-spinner" class="text-center mt-20 hidden">
+                <span class="loading loading-spinner text-info loading-lg"></span>
+            
+            </div>
+            <div id="modal-container" class="space-y-5 "> </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn text-white bg-[#DC3545] hover:bg-[#ef152b]">Close</button>
+                </form>
+                </div>
+            </div>
+            </dialog>
+        <!-- modal end-->
+
+     </main>
+     <footer>
+
+     </footer>
+    <!-- js -->
+    <script src="js/phone.js"></script>
+</body>
+</html>
+
+<div>
+    <img src="" alt="">
+    <h4></h4>
+    <p></p>
+</div>
